@@ -1,0 +1,828 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    min-width: 100%;
+    font-size: 15px;
+    color: #222222;
+    background-color: #f5f5f5;
+    /* touch-action: manipulation; */
+}
+.topBar {
+    height: 53px;
+    width: 100%;
+    background-color: #0f37bb;
+}
+.topBar .inside{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.left{
+    margin-left: 100px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+}
+.left .menu-icon{
+    font-size: 26px;
+    color: #f5f5f5;
+    margin-top: 11px;
+    opacity: 0;
+}
+.left a img{
+    margin-top: 10px;
+    margin-left: 6px;
+    height:26px;
+}
+.center{
+    width: 70%;
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 36px;
+    display: flex;
+}
+
+.center .box1 .Combo{
+    color: #ffd000;
+    transition: 0.3s;
+}
+.center .box1 .Combo:hover{
+    margin-top: 5px;
+    border-bottom: 1px solid #ffd000;
+}
+.center .box1 .menu{
+    margin-left: 10px;
+    color: #f5f5f5;
+    transition: 0.3s;
+}
+.center .box1 .menu:hover{
+    border-bottom: 1px solid white;
+}
+.right{ 
+    min-width: 300px;
+    text-align: left;
+    display: flex;
+}
+.right .notify i{
+    font-size: 30px;
+    color: #f5f5f5;
+    margin-top: 11px;
+}
+.right .User {
+    display: flex;
+    transition: 0.3s;
+    margin-left: 10px;
+    height: 50px;
+    border-radius: 8px;
+}
+.right .User:hover {
+    height: 50px;
+    background-color: #0270bf;
+    border-radius: 8px;
+    padding :auto;
+}
+.right .User img{
+    height: 30px;
+    border-radius: 50%;
+    margin: 11px 0 0 8px;
+}
+.right .User .nameuser{
+    color: #f5f5f5;
+    font-size: 17px;
+    font-weight: bolder;
+    margin : 18px 0 0 8px;
+}
+.mainBody {
+    background-color: white;
+    width: 1160px;
+    height: 532px;
+    margin: 20px 130px 0 94px;
+    position: relative;
+}
+.mainBody .topMain{
+    display: flex;
+    /* position: absolute; */
+}
+.mainBody .imgBody {
+    width: 45px;
+    height: 45px;
+    padding : 8px 0 0 24px;
+}
+.mainBody .topMain span {
+    font-size: 18px;
+    padding :20px 0 0 14px;
+    font-weight: bolder;
+}
+.mainBody .sonBody {
+    height: 488px;
+    width: 1140px;
+    background-color: #f5f5f5;
+    margin-top: -35px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.mainBody .sonBody .combo-all{
+    padding: 48px 0 0 12px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.mainBody .sonBody .combo-all .combo1 {
+    height: 198px;
+    width: 150px;
+    margin: 0 20px 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    /* text-decoration: none ; */
+    /* color:#0f37bb; */
+    transition: 0.2s;
+}
+a  {
+    text-decoration: none;
+}
+.mainBody .sonBody .combo-all .combo1 :hover{
+    color: red;
+}
+.mainBody .sonBody .combo-all .combo1 img {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+}
+.mainBody .sonBody .combo-all .combo1 .nameCombo {
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.InOut{
+    /* display: block; */
+    width: 320px;
+    height: 160px;
+    position: absolute;
+    top : 52px ;
+    right : 0px;
+    background-color: #f5f5f5;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+}
+.InOut .Up{
+    display: flex;
+}
+.InOut .Up img {
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px 0 0 16px;
+}
+.InOut .Up .sup {
+    margin: 20px 0 0 12px;
+    color : rgb(201, 22, 22);
+}
+.InOut .Down {
+    display:  flex;
+}
+.InOut .Down .mainUser {
+    width: 150px;
+    height: 20px;
+    text-align: center;
+    border: 1px gray solid;
+    margin: 10px 0 0 20px;
+}
+.InOut .Down .mainUser :hover {
+    background-color: white;
+    color: red;
+}
+.InOut .Down .outUser {
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    border: 1px gray solid;
+    margin: 10px 10px 0 100px;
+}
+.InOut .Down .outUser :hover{
+    background-color: white;
+    color: red;
+}
+.down-up {
+    opacity: 1;
+    visibility: visible;
+}
+@media (max-width:1130px) and (min-width :1020px) {
+    .left{
+        margin-left: 5px;
+        width: 20px;
+        text-align: center;
+        display: flex;
+    }
+    .left .menu-icon{
+        font-size: 26px;
+        color: #f5f5f5;
+        margin-top: 11px;
+        opacity: 0;
+    }
+    .left a img{
+        margin: 12px 8px 0 6px;
+        height:26px;
+    }
+    .center{
+        width: 70%;
+        text-align: left;
+        margin-top: 15px;
+        margin-left: 130px;
+    }
+    .center .box1 .Combo{
+        color: #ffd000;
+        transition: 0.3s;
+    }
+    .center .box1 .Combo:hover{
+        margin-top: 5px;
+        border-bottom: 1px solid #ffd000;
+    }
+    .center .box1 .menu{
+        margin-left: 10px;
+        color: #ffffff;
+        transition: 0.3s;
+    }
+    .center .box1 .menu:hover{
+        border-bottom: 1px solid white;
+    }
+    .right{ 
+        min-width: 190px;
+        text-align: right;
+        display: flex;
+    }
+    .right .notify i{
+        font-size: 30px;
+        color: #f5f5f5;
+        margin-top: 11px;
+    }
+    .right .User {
+        display: flex;
+        transition: 0.3s;
+        margin-left: 10px;
+        height: 50px;
+        border-radius: 8px;
+    }
+    .right .User:hover {
+        height: 50px;
+        background-color: #0270bf;
+        border-radius: 8px;
+        padding :auto;
+    }
+    .right .User img{
+        height: 30px;
+        border-radius: 50%;
+        margin: 11px 0 0 8px;
+    }
+    .right .User .nameuser{
+        color: #f5f5f5;
+        font-size: 15px;
+        font-weight: bolder;
+        margin : 18px 0 0 8px;
+    }
+    .mainBody {
+        background-color: white;
+        width: 100%;
+        height: 532px;
+        margin: 0 0 0 0;
+        position: relative;
+    }
+    .mainBody .topMain{
+        display: flex;
+        /* position: absolute; */
+    }
+    .mainBody .imgBody {
+        width: 45px;
+        height: 45px;
+        padding : 8px 0 0 24px;
+    }
+    .mainBody .topMain span {
+        font-size: 18px;
+        padding :20px 0 0 14px;
+        font-weight: bolder;
+    }
+    .mainBody .sonBody {
+        height: 488px;
+        width: 98%;
+        background-color: #f5f5f5;
+        margin-top: -35px;
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+    .mainBody .sonBody .combo-all{
+        padding: 48px 0 0 12px;
+        width: 96%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .mainBody .sonBody .combo-all .combo1 {
+        height: 198px;
+        width: 150px;
+        margin: 0 20px 20px 0;
+        background-color: white;
+        border-radius: 10px;
+        /* text-decoration: none ; */
+        /* color:#0f37bb; */
+        transition: 0.2s;
+    }
+    a  {
+        text-decoration: none;
+    }
+    .mainBody .sonBody .combo-all .combo1 :hover{
+        color: red;
+    }
+    .mainBody .sonBody .combo-all .combo1 img {
+        height: 150px;
+        width: 150px;
+        border-radius: 10px;
+    }
+    .mainBody .sonBody .combo-all .combo1 .nameCombo {
+        text-align: center;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+}
+@media (max-width:1018px) and (min-width :900px) {
+    .left{
+        margin-left: 5px;
+        width: 20px;
+        text-align: center;
+        display: flex;
+    }
+    .left .menu-icon{
+        font-size: 26px;
+        color: #f5f5f5;
+        margin-top: 11px;
+        opacity: 1;
+    }
+    .left a img{
+        margin: 12px 8px 0 6px;
+        height:26px;
+    }
+    .center{
+        /* display: block; */
+        width: 70%;
+        text-align: left;
+        margin-top: 15px;
+        margin-left: 20px;
+        opacity: 0;
+        /* opacity: 1; */
+    }
+    .center .box1 .Combo{
+        color: #ffd000;
+        transition: 0.3s;
+    }
+    .center .box1 .Combo:hover{
+        margin-top: 5px;
+        border-bottom: 1px solid #ffd000;
+    }
+    .center .box1 .menu{
+        margin-left: 10px;
+        color: #f5f5f5;
+        transition: 0.3s;
+    }
+    .center .box1 .menu:hover{
+        border-bottom: 1px solid white;
+    }
+    .right{ 
+        min-width: 190px;
+        text-align: right;
+        display: flex;
+    }
+    .right .notify i{
+        font-size: 30px;
+        color: #f5f5f5;
+        margin-top: 11px;
+    }
+    .right .User {
+        display: flex;
+        transition: 0.3s;
+        margin-left: 10px;
+        height: 50px;
+        border-radius: 8px;
+    }
+    .right .User:hover {
+        height: 50px;
+        background-color: #0270bf;
+        border-radius: 8px;
+        padding :auto;
+    }
+    .right .User img{
+        height: 30px;
+        border-radius: 50%;
+        margin: 11px 0 0 8px;
+    }
+    .right .User .nameuser{
+        color: #f5f5f5;
+        font-size: 15px;
+        font-weight: bolder;
+        margin : 18px 0 0 8px;
+    }
+}
+@media (max-width:900px) and (min-width :340px) {
+    .left{
+        margin-left: 5px;
+        width: 20px;
+        text-align: center;
+        display: flex;
+    }
+    .left .menu-icon{
+        font-size: 26px;
+        color: #f5f5f5;
+        margin-top: 11px;
+        opacity: 1;
+    }
+    .left a img{
+        margin: 12px 8px 0 6px;
+        height:26px;
+    }
+    .center{
+        opacity: 0;
+        width: 70%;
+        text-align: left;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+    .center .box1 .Combo{
+        color: #ffd000;
+        transition: 0.3s;
+    }
+    .center .box1 .Combo:hover{
+        margin-top: 5px;
+        border-bottom: 1px solid #ffd000;
+    }
+    .center .box1 .menu{
+        margin-left: 10px;
+        color: #f5f5f5;
+        transition: 0.3s;
+    }
+    .center .box1 .menu:hover{
+        border-bottom: 1px solid white;
+    }
+    .right{ 
+        min-width: 190px;
+        text-align: right;
+        display: flex;
+    }
+    .right .notify i{
+        font-size: 30px;
+        color: #f5f5f5;
+        margin-top: 11px;
+    }
+    .right .User {
+        display: flex;
+        transition: 0.3s;
+        margin-left: 10px;
+        height: 50px;
+        border-radius: 8px;
+    }
+    .right .User:hover {
+        height: 50px;
+        background-color: #0270bf;
+        border-radius: 8px;
+        padding :auto;
+    }
+    .right .User img{
+        height: 30px;
+        border-radius: 50%;
+        margin: 11px 0 0 8px;
+    }
+    .right .User .nameuser{
+        color: #f5f5f5;
+        font-size: 15px;
+        font-weight: bolder;
+        margin : 18px 0 0 8px;
+    }
+}
+@media (max-width:339px) and (min-width :280px) {
+    .left{
+        margin-left: 5px;
+        width: 20px;
+        text-align: center;
+        display: flex;
+    }
+    .left .menu-icon{
+        font-size: 26px;
+        color: #f5f5f5;
+        margin-top: 11px;
+        opacity: 1;
+    }
+    .left a img{
+        margin: 12px 8px 0 6px;
+        height:26px;
+        opacity: 0;
+    }
+    .center{
+        opacity: 0;
+        width: 70%;
+        text-align: left;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+    .center .box1 .Combo{
+        color: #ffd000;
+        transition: 0.3s;
+    }
+    .center .box1 .Combo:hover{
+        margin-top: 5px;
+        border-bottom: 1px solid #ffd000;
+    }
+    .center .box1 .menu{
+        margin-left: 10px;
+        color: #f5f5f5;
+        transition: 0.3s;
+    }
+    .center .box1 .menu:hover{
+        border-bottom: 1px solid white;
+    }
+    .right{ 
+        min-width: 190px;
+        text-align: right;
+        display: flex;
+    }
+    .right .notify i{
+        font-size: 30px;
+        color: #f5f5f5;
+        margin-top: 11px;
+    }
+    .right .User {
+        display: flex;
+        transition: 0.3s;
+        margin-left: 10px;
+        height: 50px;
+        border-radius: 8px;
+    }
+    .right .User:hover {
+        height: 50px;
+        background-color: #0270bf;
+        border-radius: 8px;
+        padding :auto;
+    }
+    .right .User img{
+        height: 30px;
+        border-radius: 50%;
+        margin: 11px 0 0 8px;
+    }
+    .right .User .nameuser{
+        color: #f5f5f5;
+        font-size: 15px;
+        font-weight: bolder;
+        margin : 18px 0 0 8px;
+    }
+}
+ @media (max-width:1084px) and (min-width:832px)  {
+    .mainBody {
+        background-color: white;
+        width: 100%;
+        height: 750px;
+        margin: 0 0 0 0;
+        position: relative;
+    }
+    .mainBody .topMain{
+        display: flex;
+    }
+    .mainBody .imgBody {
+        width: 45px;
+        height: 45px;
+        padding : 8px 0 0 24px;
+    }
+    .mainBody .topMain span {
+        font-size: 18px;
+        padding :20px 0 0 14px;
+        font-weight: bolder;
+    }
+    .mainBody .sonBody {
+        height: 720px;
+        width: 98%;
+        background-color: #f5f5f5;
+        margin-top: -35px;
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+    .mainBody .sonBody .combo-all{
+        padding: 48px 0 0 12px;
+        width: 96%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .mainBody .sonBody .combo-all .combo1 {
+        height: 198px;
+        width: calc(20% - 22px);
+        margin: 0 20px 20px 0;
+        background-color: white;
+        border-radius: 10px;
+        transition: 0.2s;
+    }
+    a  {
+        text-decoration: none;
+    }
+    .mainBody .sonBody .combo-all .combo1 :hover{
+        color: red;
+    }
+    .mainBody .sonBody .combo-all .combo1 img {
+        height: 75%;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .mainBody .sonBody .combo-all .combo1 .nameCombo {
+        text-align: center;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+}
+@media (max-width:831px) and (min-width:600px)  {
+    .mainBody {
+        background-color: white;
+        width: 100%;
+        height: 750px;
+        margin: 0 0 0 0;
+        position: relative;
+    }
+    .mainBody .topMain{
+        display: flex;
+      }
+    .mainBody .imgBody {
+        width: 45px;
+        height: 45px;
+        padding : 8px 0 0 24px;
+    }
+    .mainBody .topMain span {
+        font-size: 16px;
+        padding :20px 0 0 14px;
+        font-weight: bolder;
+    }
+    .mainBody .sonBody {
+        height: 720px;
+        width: 98%;
+        background-color: #f5f5f5;
+        margin-top: -35px;
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+    .mainBody .sonBody .combo-all{
+        padding: 48px 0 0 12px;
+        width: 96%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .mainBody .sonBody .combo-all .combo1 {
+        height: 168px;
+        width: calc(25% - 22px);
+        margin: 0 20px 20px 0;
+        background-color: white;
+        border-radius: 10px;
+        transition: 0.2s;
+    }
+    a  {
+        text-decoration: none;
+    }
+    .mainBody .sonBody .combo-all .combo1 :hover{
+        color: red;
+    }
+    .mainBody .sonBody .combo-all .combo1 img {
+        height: 72%;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .mainBody .sonBody .combo-all .combo1 .nameCombo {
+        text-align: center;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+} 
+
+@media (max-width:599px) and (min-width:450px)  {
+    .mainBody {
+        background-color: white;
+        width: 100%;
+        height: 850px;
+        margin: 0 0 0 0;
+        position: relative;
+    }
+    .mainBody .topMain{
+        display: flex;
+      }
+    .mainBody .imgBody {
+        width: 45px;
+        height: 45px;
+        padding : 8px 0 0 24px;
+    }
+    .mainBody .topMain span {
+        font-size: 16px;
+        padding :20px 0 0 14px;
+        font-weight: bolder;
+    }
+    .mainBody .sonBody {
+        height: 830px;
+        width: 98%;
+        background-color: #f5f5f5;
+        margin-top: -35px;
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+    .mainBody .sonBody .combo-all{
+        padding: 48px 0 0 12px;
+        width: 96%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .mainBody .sonBody .combo-all .combo1 {
+        height: 168px;
+        width: calc(33.33% - 22px);
+        margin: 0 20px 20px 0;
+        background-color: white;
+        border-radius: 10px;
+        transition: 0.2s;
+    }
+    a  {
+        text-decoration: none;
+    }
+    .mainBody .sonBody .combo-all .combo1 :hover{
+        color: red;
+    }
+    .mainBody .sonBody .combo-all .combo1 img {
+        height: 72%;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .mainBody .sonBody .combo-all .combo1 .nameCombo {
+        text-align: center;
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+} 
+@media (max-width:449px) and (min-width:319px)  {
+    .mainBody {
+        background-color: white;
+        width: 100%;
+        height: 1300px;
+        margin: 0 0 0 0;
+        position: relative;
+    }
+    .mainBody .topMain{
+        display: flex;
+      }
+    .mainBody .imgBody {
+        width: 45px;
+        height: 45px;
+        padding : 8px 0 0 24px;
+    }
+    .mainBody .topMain span {
+        font-size: 18px;
+        padding :20px 0 0 14px;
+        font-weight: bolder;
+    }
+    .mainBody .sonBody {
+        height: 1280px;
+        width: 98%;
+        background-color: #f5f5f5;
+        margin-top: -35px;
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+    .mainBody .sonBody .combo-all{
+        padding: 48px 0 0 12px;
+        width: 96%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .mainBody .sonBody .combo-all .combo1 {
+        height: 168px;
+        width: calc(50% - 22px);
+        margin: 0 20px 20px 0;
+        background-color: white;
+        border-radius: 10px;
+        transition: 0.2s;
+    }
+    a  {
+        text-decoration: none;
+    }
+    .mainBody .sonBody .combo-all .combo1 :hover{
+        color: red;
+    }
+    .mainBody .sonBody .combo-all .combo1 img {
+        height: 72%;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .mainBody .sonBody .combo-all .combo1 .nameCombo {
+        text-align: center;
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+}
+
+
